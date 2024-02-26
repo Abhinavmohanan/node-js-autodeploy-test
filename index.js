@@ -8,8 +8,9 @@ const app = express();
 const port = 80;
 
 // Define a basic route
-app.get('/', (req, res) => {
-    res.send('Test server for auto-deploy');
+app.get('/:host', (req, res) => {
+
+    res.send('Host is ' + req.params.host);
 });
 
 // Start the server
